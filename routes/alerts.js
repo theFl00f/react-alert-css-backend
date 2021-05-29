@@ -52,7 +52,7 @@ router.get("/api/alerts", async (_req, res) => {
 router.get("/alert/:id", async function (req, res) {
   try {
     var result = await AlertModel.findById(req.params.id).exec();
-    res.setHeader("Content-Type", "application/json");
+    res.set("Content-Type", "application/json");
     res.end(JSON.stringify({ result }, null, 2));
   } catch (err) {
     console.log(err);
@@ -65,7 +65,7 @@ router.post("/api/alert", async function (req, res) {
   try {
     var alert = new AlertModel(req.body);
     var result = await alert.save();
-    res.setHeader("Content-Type", "application/json");
+    res.set("Content-Type", "application/json");
     res.end(JSON.stringify({ result }, null, 2));
   } catch (err) {
     console.log(err);
