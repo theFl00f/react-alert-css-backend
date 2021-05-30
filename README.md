@@ -10,6 +10,18 @@
 
 This is a RESTful API build for [React Alert CSS Frontend](https://github.com/theFl00f/react-alert-css) deployed to Heroku that allows a user to Create and Read alert designs on [React Alert CSS](https://react-alert-css.netlify.app).
 
+## To run locally
+
+1. Create a new MongoDB Project with your desired setup, OP using default
+2. Build cluster
+3. Add MongoDB connection as `MONGO_URL` string to `.env` located in root of project, like so:
+```env
+#.env
+MONGO_URL=mongodb+srv://yourusername:yourpassword@cluster.yours.mongodb.net/
+```
+4. `yarn install` packages
+5. `yarn start` to run dev server with nodemon
+
 ### Postman
 
 To easily test the responses from the API, check out this neat Postman publication, which contains a simple sample API call for each endpoint. It can generate code for the API call in most languages.
@@ -102,12 +114,3 @@ const alert: Alert = {
 ```
 
 </details>
-
-## To run locally
-
-1. Create a new MongoDB Project with your desired setup, OP using default
-2. Build cluster
-3. Add MongoDB connection as `MONGO_URL` string to `.env` located in root of project, like so:
-```env
-MONGO_URL=mongodb+srv://yourusername:yourpassword@cluster.yours.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-```
