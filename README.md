@@ -18,7 +18,7 @@ To easily test the responses from the API, check out this neat Postman publicati
    <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" />
 </a>
 
-### Schema
+## Schema
 The type definition of an `Alert` is defined in `/routes/alerts.js` as a Mongoose Schema.
 
 <details>
@@ -59,7 +59,7 @@ const alert: Alert = {
       
 </details>
 
-### Endpoints
+## Endpoints
 
 | URL Endpoint | Method | Parameters | Return value 
 |---|---|---|---|
@@ -102,3 +102,12 @@ const alert: Alert = {
 ```
 
 </details>
+
+## To run locally
+
+1. Create a new MongoDB Project with your desired setup, OP using default
+2. Build cluster
+3. Add MongoDB connection as `MONGO_URL` string to `.env` located in root of project, like so:
+```env
+MONGO_URL=mongodb+srv://yourusername:yourpassword@cluster.yours.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+```
