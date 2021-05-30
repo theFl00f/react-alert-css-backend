@@ -51,5 +51,5 @@ const alert: Alert = {
 | URL Endpoint | Method | Parameters | Return value 
 |---|---|---|---|
 |[/api/alerts](https://react-alert-css-backend.herokuapp.com/api/alerts)|Get Many| | `Alert[]` |
-|[/api/alert/:id](https://react-alert-css-backend.herokuapp.com/api/alert/)|Get One| | `Alert` |
-|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alerts)|Add One| `Alert` with no timestamps | `Alert` |
+|[/api/alert/:id](http://react-alert-css-backend.herokuapp.com/api/alert/60a5c40242ede7a712edacc6)|Get One| | `Alert` |
+|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert)|Add One| `Alert` with no timestamps | `Alert` |
