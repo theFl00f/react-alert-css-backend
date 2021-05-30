@@ -9,7 +9,15 @@
 &nbsp;
 
 This is a RESTful API build for [React Alert CSS Frontend](https://github.com/theFl00f/react-alert-css) deployed to Heroku that allows a user to Create and Read alert designs on [React Alert CSS](https://react-alert-css.netlify.app).
-  
+
+### Postman
+
+To easily test the responses from the API, check out this neat Postman publication, which contains a simple sample API call for each endpoint. It can generate code for the API call in most languages.
+
+<a href="https://documenter.getpostman.com/view/14555787/TzXzEHiH">
+   <img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=red" />
+</a>
+
 ### Schema
 The type definition of an `Alert` is defined in `/routes/alerts.js` as a Mongoose Schema.
 
@@ -57,7 +65,7 @@ const alert: Alert = {
 |---|---|---|---|
 |[/api/alerts](https://react-alert-css-backend.herokuapp.com/api/alerts)|Get Many| | `Alert[]` |
 |[/api/alert/:id](http://react-alert-css-backend.herokuapp.com/api/alert/60a5c40242ede7a712edacc6)|Get One| | `Alert` |
-|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert)|Add One| See below table | `Alert` |
+|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert) Invalid link without body data|Add One| See below table | `Alert` |
 
 <details>
    <summary>View JSON input for Add One Alert</summary>
