@@ -11,8 +11,11 @@
 This is a RESTful API build for [React Alert CSS Frontend](https://github.com/theFl00f/react-alert-css) deployed to Heroku that allows a user to Create and Read alert designs on [React Alert CSS](https://react-alert-css.netlify.app).
   
 ### Schema
-The type definition of an `Alert` is defined in `/routes/alerts.js` as a Mongoose Schema, see below for reference.
+The type definition of an `Alert` is defined in `/routes/alerts.js` as a Mongoose Schema.
 
+<details>
+   <summary>See inside for reference</summary>   
+      
 ```node
 const alert: Alert = {
     user: String,
@@ -45,6 +48,8 @@ const alert: Alert = {
   { timestamps: { createdAt: "created_at" } }
 }
 ```
+      
+</details>
 
 ### Endpoints
 
@@ -52,4 +57,40 @@ const alert: Alert = {
 |---|---|---|---|
 |[/api/alerts](https://react-alert-css-backend.herokuapp.com/api/alerts)|Get Many| | `Alert[]` |
 |[/api/alert/:id](http://react-alert-css-backend.herokuapp.com/api/alert/60a5c40242ede7a712edacc6)|Get One| | `Alert` |
-|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert)|Add One| `Alert` with no timestamps | `Alert` |
+|[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert)|Add One| See below table | `Alert` |
+
+<details>
+   <summary>View JSON input for Add One Alert</summary>
+   
+   ```json
+   {
+      "textValues": {
+         "message": "",
+         "button": "Close"
+      },
+      "css": {
+         "alertBorderColor": "#181069",
+         "alertBackgroundColor": "#3c1069",
+         "buttonBorderColor": "#4d1069",
+         "buttonBackgroundColor": "#5f1069",
+         "textColor": "#ffffff",
+         "buttonTextColor": "#ffffff"
+      },
+      "dimensions": {
+         "alertWidth": 24,
+         "alertHeight": 14,
+         "alertBorderRadius": 0,
+         "alertBorderWidth": 0.5,
+         "alertXPadding": 1,
+         "alertYPadding": 1,
+         "buttonXPadding": 4,
+         "buttonYPadding": 0,
+         "buttonBorderRadius": 10,
+         "buttonBorderWidth": 0.5
+      },
+      "user": "Anonymous",
+      "alertName": "Untitled"
+   }
+```
+
+</details>
