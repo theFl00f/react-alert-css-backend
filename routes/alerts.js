@@ -49,7 +49,7 @@ router.get("/api/alerts", async (_req, res) => {
   }
 });
 
-router.get("/alert/:id", async function (req, res) {
+router.get("/api/alert/:id", async function (req, res) {
   try {
     var result = await AlertModel.findById(req.params.id).exec();
     res.set("Content-Type", "application/json");
