@@ -40,7 +40,7 @@ const AlertModel = Mongoose.model("alert", AlertSchema);
 // **GET alerts listing.
 router.get("/api/alerts", async (_req, res) => {
   try {
-    var result = await AlertModel.find().exec();
+    var result = await AlertModel.find().sort({ created_at: -1 }).exec();
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ result }, null, 2));
   } catch (err) {
