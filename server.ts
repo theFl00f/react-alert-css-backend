@@ -1,18 +1,18 @@
-require("dotenv").config();
-const createError = require("http-errors");
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const cors = require("cors");
+import * as dotenv from "dotenv";
+import createError from "http-errors";
+import express, { Request, Response } from "express";
+import path from "path";
+import cookieParser from "cookie-parser";
+import logger from "morgan";
+import cors from "cors";
+import alertsRouter from "./routes/alerts";
 
-const alertsRouter = require("./routes/alerts");
-
+dotenv.config();
 const app = express();
 
 //mongoose setup
 
-const Mongoose = require("mongoose");
+import Mongoose from "mongoose";
 
 if (!process.env.MONGO_URL) {
   throw new Error("No MONGO_URL env variable was provided");
@@ -63,8 +63,7 @@ app.listen(port, () => {
   console.log(`listening at port ${port}`);
 });
 
-// error handler
-app.use(function (err, req, res, next) {
+const errorHandler = (err: any, req: Request, res: Response) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
@@ -72,6 +71,9 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
-});
+};
+
+// error handler
+app.use(errorHandler);
 
 module.exports = app;
