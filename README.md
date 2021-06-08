@@ -75,7 +75,7 @@ const alert: Alert = {
 
 | URL Endpoint | Method | Parameters | Return value 
 |---|---|---|---|
-|[/api/alerts](https://react-alert-css-backend.herokuapp.com/api/alerts)|Get Many| | `Alert[]` |
+|[/api/alerts](https://react-alert-css-backend.herokuapp.com/api/alerts)|Get Many| | `Alert[]`, descending creation date |
 |[/api/alert/:id](http://react-alert-css-backend.herokuapp.com/api/alert/60a5c40242ede7a712edacc6)|Get One| | `Alert` |
 |[/api/alert](https://react-alert-css-backend.herokuapp.com/api/alert) Invalid link without body data|Add One| See below table | `Alert` |
 
